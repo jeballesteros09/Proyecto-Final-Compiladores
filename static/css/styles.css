@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #3c6eb4;
+    background-color: #f0f0f0;
+}
+
+h1{
+    font-family: Arial, sans-serif;
+    color: #3c6eb4;
+    font-size: 35px;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+/* Añadir margen entre la tabla y los botones */
+#cityTable {
+    margin-top: 20px; /* Ajusta el valor según el espacio deseado */
+}
+
+/* Bordes de la tabla en azul */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid #3c6eb4; /* Azul para el borde exterior de la tabla */
+}
+
+/* Encabezado de la tabla con bordes blancos entre celdas */
+table th {
+    background-color: #3c6eb4; /* Azul de fondo para el encabezado */
+    color: white;              /* Texto en blanco */
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+    border-left: 1px solid white; /* Bordes blancos entre celdas */
+    border-right: 1px solid white;
+}
+
+table th:first-child {
+    border-left: none; /* Sin borde izquierdo en la primera celda del encabezado */
+}
+
+table th:last-child {
+    border-right: none; /* Sin borde derecho en la última celda del encabezado */
+}
+
+/* Bordes azules para las celdas del cuerpo de la tabla */
+table td {
+    border: 1px solid #3c6eb4; /* Azul para los bordes de las celdas */
+    padding: 8px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #3c6eb4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2c5a93;
+}
