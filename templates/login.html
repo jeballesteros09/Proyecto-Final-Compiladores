@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #3c6eb4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 75vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: #3c6eb4;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        label, input, button {
+            width: 100%;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        input {
+            padding: 1px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #3c6eb4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: #285a8e;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ciudades del Mundo</h1>
+    <h2>Inicio de Sesion</h2>
+    <form id="loginForm" action="/login" method="POST">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Iniciar Sesion</button>
+    </form>
+</body>
+</html>
