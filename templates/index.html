@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Ciudades</title>
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+</head>
+<body>
+
+    <div class="logout-container">
+        <form action="/logout" method="GET">
+            <button type="submit" class="logout-button">Cerrar Sesion</button>
+        </form>
+    </div>
+
+    <h1>Ciudades del Mundo</h1>
+
+    <h2 id="formTitle">Agregar Nueva Ciudad</h2>
+    <div id="addCityForm">
+        <input type="text" id="cityName" placeholder="Nombre de la ciudad">
+        <input type="text" id="countryCode" placeholder="Código de país" maxlength="3">
+        <input type="text" id="district" placeholder="Distrito">
+        <input type="number" id="population" placeholder="Población">
+        <button onclick="addCity()">Agregar</button>
+    </div>   
+
+    <br></br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Código de País</th>
+                <th>Distrito</th>
+                <th>Población</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+    <div id="searchControls">
+        <!-- Buscar por nombre de ciudad (ya existente) -->
+        <input type="text" id="searchCityName" placeholder="Buscar por nombre de ciudad">
+        <button onclick="searchByCityName()">Buscar Ciudad</button>
+            
+        <!-- Buscar por código de país -->
+        <input type="text" id="searchCountryCode" placeholder="Buscar por código de país" maxlength="3">
+        <button onclick="searchByCountryCode()">Buscar por País</button>
+        
+        <!-- Buscar por distrito -->
+        <input type="text" id="searchDistrict" placeholder="Buscar por nombre de distrito">
+        <button onclick="searchByDistrict()">Buscar por Distrito</button>
+        <button onclick="loadCities()">Quitar filtro</button>
+    </div>
+    
+    <br></br>
+
+        <tbody id="cityTable">
+            <!-- City data rows will be populated here -->
+        </tbody>
+    </table>    
+</body>
+<script src="/static/js/app.js"></script>
+</html>
 
